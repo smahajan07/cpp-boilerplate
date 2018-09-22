@@ -6,9 +6,9 @@
 
 ## Group Information
 
-TDD 10
-Team B
-Author : [Sarthak Mahajan](https://github.com/smahajan07)
+- TDD 10
+- Team B
+- Author : [Sarthak Mahajan](https://github.com/smahajan07)
 
 ## Overview
 
