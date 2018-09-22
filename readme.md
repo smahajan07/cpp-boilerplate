@@ -1,6 +1,7 @@
 # C++ Boilerplate
 
-TODO: add badges
+[![Build Status](https://travis-ci.com/smahajan07/pid-controller.svg?branch=master)](https://travis-ci.com/smahajan07/pid-controller)
+[![Coverage Status](https://coveralls.io/repos/github/smahajan07/pid-controller/badge.svg?branch=master)](https://coveralls.io/github/smahajan07/pid-controller?branch=master)
 ---
 
 ## Overview
