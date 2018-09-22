@@ -4,6 +4,12 @@
 [![Coverage Status](https://coveralls.io/repos/github/smahajan07/pid-controller/badge.svg?branch=master)](https://coveralls.io/github/smahajan07/pid-controller?branch=master)
 ---
 
+## Group Information
+
+TDD 10
+Team B
+Author : [Sarthak Mahajan](https://github.com/smahajan07)
+
 ## Overview
 
 Simple starter C++ project with:
