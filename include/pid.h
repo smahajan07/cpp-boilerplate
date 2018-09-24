@@ -3,15 +3,15 @@
 
 #include<iostream>
 
-class pidController(){
-	private:
-		float k_p;
-		float k_i;
-		float k_d;
-	public:
-		float setpointVal;
-		float initVel;
-		float computeVelocity();
+class pidController{
+  private:
+    float k_p;
+    float k_i;
+    float k_d;
+  public:
+    float setpointVal;
+    float initVel;
+    float computeVelocity();
 };
 
 #endif
