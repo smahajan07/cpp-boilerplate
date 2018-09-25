@@ -15,9 +15,9 @@ class pidController{
     float k_p;
     float k_i;
     float k_d;
-    double dt;
   public:
     pidController();
+    double dt;
     double integral;
     double prevError;
     double computeVelocity(double& , double& );
