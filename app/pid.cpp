@@ -46,7 +46,7 @@ pidController::pidController(){
   // for example dt = 0.4
   dt = 0.0;
 
-  // integral and prevError can be intialized
+  // integral and prevError can be initialized
   // to zero
   integral = 0;
   prevError = 0;
@@ -69,6 +69,9 @@ pidController::pidController(){
 double pidController::computeVelocity(double& vI, double& vF){
   // WRITE YOUR CODE HERE
 
-  return 0;
+  double vTmp;  // This is just a temporary variable
+
+  // change back to variable used to store computed value
+  return vTmp;
 }
 
