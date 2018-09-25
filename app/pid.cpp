@@ -1,4 +1,4 @@
-/*
+/**
  * Copyright (c) 2018, Sarthak Mahajan
  * All rights reserved.
  *
@@ -38,13 +38,13 @@
  */
 pidController::pidController(){
   // set values of the gains
-  k_p = 0.0;
-  k_i = 0.0;
-  k_d = 0.0;
+  k_p = 0.4;
+  k_i = 0.1;
+  k_d = 0.05;
 
   // set dt to small value, EXCEPT zero
   // for example dt = 0.4
-  dt = 0.0;
+  dt = 0.4;
 
   // integral and prevError can be initialized
   // to zero
@@ -67,11 +67,16 @@ pidController::pidController(){
 
  */
 double pidController::computeVelocity(double& vI, double& vF){
-  // WRITE YOUR CODE HERE
-
-  double vTmp;  // This is just a temporary variable
-
-  // change back to variable used to store computed value
-  return vTmp;
+  // Setting error and dervative to zero
+  double error=0,derivative=0;
+  // Calculation of the error
+  error = vF - vI;
+  // Calculation of the integral error
+  integral +=error * dt;
+  // Calculation of the derivative error
+  derivative = (error - prevError)/dt;
+  prevError = error;
+  // Returning the Velocity
+  return vI + k_p*error + k_i * integral + k_d * derivative;
 }
 
