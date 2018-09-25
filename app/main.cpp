@@ -31,20 +31,32 @@
 
 int main() {
   double vI, vF;
-  // Asking user for initial velocity and
-  // desired velocity and desired velocity
+  double count = 0;
+  // Threshold for the
+  double threshold = 0.01;
+  // Asking the user to enter initial velocity and final velocity
   std::cout << "Please enter the initial velocity" << std::endl;
   std::cin >> vI;
   std::cout << "Please enter the final velocity" << std::endl;
   std::cin >> vF;
 
   pidController controller;
-
+  // Loop is for computing velocity
   while (true) {
+    // Calling the computeVelocity function
     vI = controller.computeVelocity(vI, vF);
     std::cout << "Current Velocity  : " << vI << "\t" << "Desired Velocity  : "
               << vF << std::endl;
+    // Checking whether the current velocity has reached +/- 0.01 of the desired velocity
+    if ((vI >= vF - threshold) && (vI <= vF + threshold))
+      count+=1;
+    else
+      count =0;
+    // If the velocity is within the threshold of the desired velocity of 100 consecutive time
+    // it will break
+    if ((count ==100) && ((vI >= vF - threshold) && (vI <= vF + threshold)))
+      break;
   }
-
+  std::cout << "Reach Final Velocity." << std::endl;
   return 0;
 }
