@@ -6,10 +6,16 @@
 
 ## Group Information
 
+- Part 1
 - TDD 10
 - Team B
 - Author : [Sarthak Mahajan](https://github.com/smahajan07)
 
+- Part 2
+- TDD 10
+- Team A
+- Driver: Nantha Kumar Sunder
+- Navigator: Chein-Te Lee 
 ## Standard install via command-line
 ```
 git clone --recursive https://github.com/dpiet/cpp-boilerplate
