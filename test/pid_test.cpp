@@ -11,7 +11,7 @@
  */
 
 #include <gtest/gtest.h>
-#include "pid.h"
+#include "../include/pid.h"
 
 /**
  * @brief Unit test to check time interval dt
@@ -35,6 +35,6 @@ TEST(timeInterval, timeIntervalNotZero) {
 
 TEST(computeTest, noError) {
   pidController obj2;
-  double vI = 10,vF = 10;
+  double vI = 10, vF = 10;
   EXPECT_EQ(vF, obj2.computeVelocity(vI, vF));
 }

@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2018, Sarthak Mahajan
+ * All rights reserved.
+ *
+ * Author: sarthak
+ */
+
 #include <gtest/gtest.h>
 
 int main(int argc, char** argv) {

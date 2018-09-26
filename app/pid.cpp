@@ -15,8 +15,7 @@
  * is achieved.
  */
 
-#include "pid.h"
-
+#include "../include/pid.h"
 
 /**
 
@@ -36,7 +35,7 @@
  * @return none
 
  */
-pidController::pidController(){
+pidController::pidController() {
   // set values of the gains
   k_p = 0.4;
   k_i = 0.1;
@@ -50,8 +49,6 @@ pidController::pidController(){
   // to zero
   integral = 0;
   prevError = 0;
-
-
 }
 
 /**
@@ -66,17 +63,17 @@ pidController::pidController(){
  * @return computed velocity
 
  */
-double pidController::computeVelocity(double& vI, double& vF){
+double pidController::computeVelocity(double& vI, double& vF) {
   // Setting error and dervative to zero
-  double error=0,derivative=0;
+  double error = 0, derivative = 0;
   // Calculation of the error
   error = vF - vI;
   // Calculation of the integral error
-  integral +=error * dt;
+  integral += error * dt;
   // Calculation of the derivative error
-  derivative = (error - prevError)/dt;
+  derivative = (error - prevError) / dt;
   prevError = error;
   // Returning the Velocity
-  return vI + k_p*error + k_i * integral + k_d * derivative;
+  return vI + k_p * error + k_i * integral + k_d * derivative;
 }
 

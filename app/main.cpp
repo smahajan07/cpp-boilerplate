@@ -15,7 +15,7 @@
  */
 
 #include <iostream>
-#include "pid.h"
+#include "../include/pid.h"
 
 /**
 
@@ -47,14 +47,15 @@ int main() {
     vI = controller.computeVelocity(vI, vF);
     std::cout << "Current Velocity  : " << vI << "\t" << "Desired Velocity  : "
               << vF << std::endl;
-    // Checking whether the current velocity has reached +/- 0.01 of the desired velocity
+    // Checking whether the current velocity has reached
+    // +/- 0.01 of the desired velocity
     if ((vI >= vF - threshold) && (vI <= vF + threshold))
-      count+=1;
+      count += 1;
     else
-      count =0;
-    // If the velocity is within the threshold of the desired velocity of 100 consecutive time
-    // it will break
-    if ((count ==100) && ((vI >= vF - threshold) && (vI <= vF + threshold)))
+      count = 0;
+    // If the velocity is within the threshold of the desired
+    // velocity of 100 consecutive time it will break
+    if ((count == 100) && ((vI >= vF - threshold) && (vI <= vF + threshold)))
       break;
   }
   std::cout << "Reach Final Velocity." << std::endl;
