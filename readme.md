@@ -1,4 +1,8 @@
 # PID controller
+
+[![Build Status](https://travis-ci.com/smahajan07/pid-controller.svg?branch=mast$
+[![Coverage Status](https://coveralls.io/repos/github/smahajan07/pid-controller/$
+
 ---
 
 ## Group Information
